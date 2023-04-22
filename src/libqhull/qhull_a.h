@@ -126,7 +126,7 @@ void    qh_partitioncoplanar(pointT *point, facetT *facet, realT *dist, boolT al
 void    qh_partitionpoint(pointT *point, facetT *facet);
 void    qh_partitionvisible(boolT allpoints, int *numpoints);
 void    qh_joggle_restart(const char *reason);
-void    qh_printsummary(FILE *fp);
+void    qh_printsummary(FILE *fp, char verbouse=false);
 
 /***** -global.c internal prototypes (alphabetical) ***********************/
 

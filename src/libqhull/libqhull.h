@@ -1117,7 +1117,7 @@ struct qhT {
 void    qh_qhull(void);
 boolT   qh_addpoint(pointT *furthest, facetT *facet, boolT checkdist);
 void    qh_errexit2(int exitcode, facetT *facet, facetT *otherfacet);
-void    qh_printsummary(FILE *fp);
+void    qh_printsummary(FILE *fp, char verbouse=false);
 
 /********* -user.c prototypes (alphabetical) **********************/
 
@@ -1153,7 +1153,7 @@ facetT *qh_findbestnew(pointT *point, facetT *startfacet,
                      realT *dist, boolT bestoutside, boolT *isoutside, int *numpart);
 boolT   qh_gram_schmidt(int dim, realT **rows);
 void    qh_outerinner(facetT *facet, realT *outerplane, realT *innerplane);
-void    qh_printsummary(FILE *fp);
+void    qh_printsummary(FILE *fp, char verbouse=false);
 void    qh_projectinput(void);
 void    qh_randommatrix(realT *buffer, int dim, realT **row);
 void    qh_rotateinput(realT **rows);

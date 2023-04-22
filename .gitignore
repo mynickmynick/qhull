@@ -72,3 +72,10 @@ CVS/*
 # Other files
 working/
 
+
+/.vs*
+/out/build/
+/out/install/
+/.gitignore
+.gitignore
+/CMakeSettings.json

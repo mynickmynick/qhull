@@ -146,7 +146,7 @@ void    qh_fprintf(FILE *fp, int msgcode, const char *fmt, ... );
 void    qh_fprintf(FILE *fp, int msgcode, const char *fmt, ... )
 {
     static int needs_cr= 0;  /* True if qh_fprintf needs a CR. testqset is not itself reentrant */
-
+    return;
     size_t fmtlen= strlen(fmt);
     va_list args;
 

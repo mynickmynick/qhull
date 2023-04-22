@@ -1528,7 +1528,9 @@ void qh_partitionvisible(boolT allpoints, int *numoutside /* qh.visible_list */)
     determine number of points, vertices, and coplanar points
     print summary
 */
-void qh_printsummary(FILE *fp) {
+void qh_printsummary(FILE *fp, char verbouse) {
+    if (!verbouse)
+        return;
   realT ratio, outerplane, innerplane;
   double cpu;
   int size, id, nummerged, numpinched, numvertices, numcoplanars= 0, nonsimplicial=0, numdelaunay= 0;
