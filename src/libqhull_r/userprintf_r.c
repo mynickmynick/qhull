@@ -45,7 +45,13 @@
 void qh_fprintf(qhT *qh, FILE *fp, int msgcode, const char *fmt, ... ) {
   va_list args;
   facetT *neighbor, **neighborp;
-
+  
+  if (!fp)
+  {
+      //printf("ABORTING !!!!!!!!!!!!!!!!!!!!!!!!!!\n");
+      return;
+  }
+  
   if (!fp) {
     if(!qh){
       qh_fprintf_stderr(6241, "qhull internal error (userprintf_r.c): fp and qh not defined for qh_fprintf '%s'\n", fmt);
@@ -62,6 +68,7 @@ void qh_fprintf(qhT *qh, FILE *fp, int msgcode, const char *fmt, ... ) {
   }else if (msgcode >= MSG_ERROR && msgcode < MSG_STDERR ) {
     fprintf(fp, "QH%.4d ", msgcode);
   }
+  //
   va_start(args, fmt);
   vfprintf(fp, fmt, args);
   va_end(args);

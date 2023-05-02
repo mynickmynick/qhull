@@ -172,8 +172,10 @@ int qh_new_qhull(qhT *qh, int dim, int numpoints, coordT *points, boolT ismalloc
     qh_qhull(qh);
     qh_check_output(qh);
     if (outfile) {
+        //printf( "qh_produce_output----stdout enabled-----------------\n");
       qh_produce_output(qh);
     }else {
+        //printf( "qh_produce_output----stdout disabled33-----------------\n");
       qh_prepare_output(qh);
     }
     if (qh->VERIFYoutput && !qh->FORCEoutput && !qh->STOPadd && !qh->STOPcone && !qh->STOPpoint)

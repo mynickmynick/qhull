@@ -45,6 +45,13 @@
 void qh_fprintf(FILE *fp, int msgcode, const char *fmt, ... ) {
   va_list args;
   facetT *neighbor, **neighborp;
+  
+  if (!fp)
+  {
+    //  printf("ABORTING !!!!!!!!!!!!!!!!!!!!!!!!!!\n");
+      return;
+  }
+  
 
   if (!fp) {
     /* could use qhmem.ferr, but probably better to be cautious */
